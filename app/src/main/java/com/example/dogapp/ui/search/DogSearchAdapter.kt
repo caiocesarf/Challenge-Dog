@@ -4,7 +4,7 @@ import BreedsDTO
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dogapp.databinding.BasicBreedDetailBinding
+import com.example.dogapp.databinding.BasicBreedItemBinding
 import com.example.dogapp.utils.loadFromUrl
 
 class DogSearchAdapter : RecyclerView.Adapter<DogSearchAdapter.BreedDetailViewHolder>() {
@@ -31,14 +31,14 @@ class DogSearchAdapter : RecyclerView.Adapter<DogSearchAdapter.BreedDetailViewHo
         parent: ViewGroup,
         viewType: Int
     ): DogSearchAdapter.BreedDetailViewHolder {
-        val binding = BasicBreedDetailBinding.inflate(
+        val binding = BasicBreedItemBinding.inflate(
             LayoutInflater.from(parent.context),
             parent, false
         )
         return BreedDetailViewHolder(binding)
     }
 
-    inner class BreedDetailViewHolder(private val binding: BasicBreedDetailBinding) :
+    inner class BreedDetailViewHolder(private val binding: BasicBreedItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(breds: BreedsDTO) {
             itemView.run {

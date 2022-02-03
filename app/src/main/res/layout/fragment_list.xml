@@ -13,14 +13,25 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/title_text_1x_margin"
         android:gravity="start"
-        android:lineHeight="@dimen/title_text_line_height"
         android:text="@string/dog_tt_breeds"
         android:textColor="@color/black"
-        android:textFontWeight="300"
         android:textSize="@dimen/title_text_font_size"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:targetApi="p" />
+        />
+
+    <TextView
+        android:id="@+id/textview_error"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/title_FromCenterBottom_Large_margin"
+        android:gravity="center"
+        android:text="@string/dog_error_list"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_text_1x_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textview_first"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/breed_grid"
@@ -38,6 +49,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textview_first"
         app:spanCount="1"
         tools:itemCount="5"
-        tools:listitem="@layout/basic_breed_detail" />
+        android:visibility="invisible"
+        tools:listitem="@layout/basic_breed_item" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

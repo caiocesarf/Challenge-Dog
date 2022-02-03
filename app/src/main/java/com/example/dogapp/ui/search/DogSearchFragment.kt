@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dogapp.data.api.ApiHelper
 import com.example.dogapp.data.api.RetrofitBuilder
 import com.example.dogapp.databinding.FragmentDashboardBinding
@@ -36,13 +38,12 @@ class DogSearchFragment : Fragment() {
         setListeners()
         configSearch()
         binding.breedGrid.adapter = adapter
-
     }
-
+    
     private fun configSearch () {
-        binding.searchBreedTextview.doAfterTextChanged {
+//        binding.searchBreedTextview.doAfterTextChanged {
 //            viewModel.getUsers()
-        }
+//        }
     }
 
     private fun setupViewModel() {

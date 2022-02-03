@@ -4,6 +4,7 @@
     <string name="title_dashboard">Search</string>
     <string name="dog_tt_search">Dog Search</string>
     <string name="dog_tt_breeds">Breeds List</string>
+    <string name="dog_error_list">Something went wrong!</string>
 
     <string name="dog_tb_label">Choose a breed: </string>
     <string name="select_breed_label_text">Select your favourite breeds below</string>

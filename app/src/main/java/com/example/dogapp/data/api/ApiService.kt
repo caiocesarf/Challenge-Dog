@@ -5,6 +5,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Headers
+import retrofit2.http.Query
 
 interface ApiService {
 
@@ -12,7 +13,7 @@ interface ApiService {
         const val API_KEY = "3887a2f4-e1cb-4adb-9495-0050d4cf2966"
     }
 
-    @Headers(API_KEY)
+    @Headers("x-api-key:" + "3887a2f4-e1cb-4adb-9495-0050d4cf2966")
     @GET("/breeds")
     suspend fun getDogsByBreeds():  List<BreedsDTO>
 
