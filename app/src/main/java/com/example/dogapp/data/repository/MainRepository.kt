@@ -1,8 +1,8 @@
-package com.mindorks.retrofit.coroutines.data.repository
+package com.example.dogapp.data.repository
 
 import com.example.dogapp.data.api.ApiHelper
 
 class MainRepository(private val apiHelper: ApiHelper) {
 
-    suspend fun getUsers() = apiHelper.getUsers()
+    suspend fun getDogsBreeds() = apiHelper.getDogsByBreeds()
 }
