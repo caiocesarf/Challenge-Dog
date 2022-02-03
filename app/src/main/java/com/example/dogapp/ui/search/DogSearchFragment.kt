@@ -1,16 +1,13 @@
-package com.example.dogapp.ui.dashboard
+package com.example.dogapp.ui.search
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.example.dogapp.databinding.FragmentDashboardBinding
 
-class DashboardFragment : Fragment() {
+class DogSearchFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
     private val binding get() = _binding!!

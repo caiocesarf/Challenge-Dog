@@ -1,23 +1,19 @@
-package com.example.dogapp.ui.home
+package com.example.dogapp.ui.List
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.example.dogapp.databinding.FragmentHomeBinding
-import org.koin.androidx.viewmodel.compat.ScopeCompat.viewModel
+import com.example.dogapp.ui.main.viewmodel.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class HomeFragment : Fragment() {
+class DogListFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private val viewModel by viewModel<HomeViewModel>()
+    private val viewModel by sharedViewModel<MainViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
