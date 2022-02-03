@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/basic_view_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/dogImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="@dimen/basic_view_margin"
+        app:layout_constraintEnd_toStartOf="@+id/select_breed_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="Your main image view"
+            android:src="@drawable/dog" />
+
+        <ImageView
+            android:id="@+id/dogImageSelectionIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/basic_view_margin"
+            android:contentDescription="Icon to be displayed after result"
+            android:src="@drawable/checkmark"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/select_breed_label"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_margin="@dimen/title_text_1x_margin"
+        android:gravity="start"
+        android:hint="@string/select_breed_label_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/select_breed_label_text_font_size"
+        app:layout_constraintStart_toEndOf="@id/dogImageView"
+        app:layout_constraintTop_toTopOf="@id/dogImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

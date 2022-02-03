@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/giofe/AndroidStudioProjects/dogapp2/app/src/main/res/drawable/breed_selected_item_border.xml" value="0.169" />
         <entry key="..\:/Users/giofe/AndroidStudioProjects/dogapp2/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
-        <entry key="..\:/Users/giofe/AndroidStudioProjects/dogapp2/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="..\:/Users/giofe/AndroidStudioProjects/dogapp2/app/src/main/res/layout/basic_breed_detail.xml" value="0.15989583333333332" />
+        <entry key="..\:/Users/giofe/AndroidStudioProjects/dogapp2/app/src/main/res/layout/fragment_dashboard.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/giofe/AndroidStudioProjects/dogapp2/app/src/main/res/layout/fragment_home.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/giofe/AndroidStudioProjects/dogapp2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.22" />
       </map>

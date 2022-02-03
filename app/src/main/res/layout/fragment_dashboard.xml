@@ -4,20 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightGray"
     tools:context=".ui.search.DogSearchFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:text="SEARCH"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textview_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:lineHeight="@dimen/title_text_line_height"
+            android:layout_margin="@dimen/title_text_1x_margin"
+            android:text="@string/dog_tt_search"
+            android:textColor="@color/black"
+            android:textFontWeight="300"
+            android:textSize="@dimen/title_text_font_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="p" />
+        <LinearLayout
+            android:id="@+id/select_breed_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/next_button_margin"
+            android:layout_margin="@dimen/title_text_1x_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_first"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:lineHeight="@dimen/title_text_line_height"
+                android:text="@string/select_breed_label_text"
+                android:textColor="@color/black"
+                android:textFontWeight="30"
+                android:textSize="@dimen/select_breed_label_text_font_size"
+                tools:targetApi="p" />
+            <TextView
+                android:id="@+id/SelectedCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:lineHeight="@dimen/title_text_line_height"
+                android:layout_marginStart="@dimen/title_text_1x_margin"
+                android:textColor="@color/darkGray"
+                android:textFontWeight="500"
+                android:textSize="@dimen/select_breed_label_text_font_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_first"
+                tools:targetApi="p" />
+            <TextView
+                android:id="@+id/TotalBreedCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:lineHeight="@dimen/title_text_line_height"
+                android:textColor="@color/black"
+                android:textFontWeight="30"
+                android:textSize="@dimen/select_breed_label_text_font_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_first"
+                tools:targetApi="p" />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/search_breed_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineHeight="@dimen/title_text_line_height"
+            android:hint="@string/dog_tt_search"
+            android:textColorHint="#BFBABA"
+            android:textColor="@color/black"
+            android:textFontWeight="30"
+            android:background="@drawable/basic_edit_border"
+            android:layout_margin="@dimen/title_text_1x_margin"
+            android:inputType="text"
+            android:onTextChanged="@{(text, start, before, count) -> viewModel.searchBreedFromFavList(text)}"
+            android:autofillHints=""
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/select_breed_label"
+            tools:targetApi="p" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:layout_margin="@dimen/title_text_1x_margin"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/next_button_corner_radius"
+            app:layout_constraintTop_toBottomOf="@id/search_breed_textview"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="@dimen/title_text_1x_margin"
+            android:layout_marginBottom="@dimen/title_text_1x_margin"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/breed_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/button_first"
+            android:layout_margin="@dimen/title_text_1x_margin"
+            app:spanCount="2"
+            tools:itemCount="20"
+            tools:listitem="@layout/basic_breed_detail" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
