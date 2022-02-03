@@ -1,13 +1,11 @@
-package com.example.dogapp.ui.List
+package com.example.dogapp.ui.list
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.dogapp.MainActivity
 import com.example.dogapp.data.api.ApiHelper
 import com.example.dogapp.data.api.RetrofitBuilder
 import com.example.dogapp.databinding.FragmentListBinding

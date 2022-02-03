@@ -9,17 +9,15 @@ import retrofit2.http.Query
 
 interface ApiService {
 
-    companion object {
-        const val API_KEY = "3887a2f4-e1cb-4adb-9495-0050d4cf2966"
-    }
+    @GET("/breeds/")
+    suspend fun getDogsByBreeds(
+        @Query("x-api-key") apiKey : String
+        ):  List<BreedsDTO>
 
-    @Headers("x-api-key:" + "3887a2f4-e1cb-4adb-9495-0050d4cf2966")
-    @GET("/breeds")
-    suspend fun getDogsByBreeds():  List<BreedsDTO>
-
-    @Headers(API_KEY)
     @GET("/breeds/search")
-    suspend fun getDogsBySearch():  List<BreedsDTO>
+    suspend fun getDogsBySearch(
+        @Query("x-api-key") apiKey : String
+    ):  List<BreedsDTO>
 
 
 }

@@ -5,7 +5,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitBuilder {
 
-    private const val BASE_URL = "https://api.TheDogAPI.com/v1/"
+    private const val BASE_URL = "https://api.thedogapi.com/v1/"
+
 
     private fun getRetrofit(): Retrofit {
         return Retrofit.Builder()

@@ -29,6 +29,7 @@
         android:text="@string/dog_error_list"
         android:textColor="@color/black"
         android:textSize="@dimen/title_text_1x_margin"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textview_first"
         />
@@ -49,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textview_first"
         app:spanCount="1"
         tools:itemCount="5"
-        android:visibility="invisible"
+        android:visibility="visible"
         tools:listitem="@layout/basic_breed_item" />
 
 
