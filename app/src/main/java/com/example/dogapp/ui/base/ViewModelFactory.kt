@@ -3,7 +3,6 @@ package com.example.dogapp.ui.base
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.dogapp.data.api.ApiHelper
-import com.example.dogapp.ui.main.viewmodel.MainViewModel
 import com.example.dogapp.data.repository.MainRepository
 
 

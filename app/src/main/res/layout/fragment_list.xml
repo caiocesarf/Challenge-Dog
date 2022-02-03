@@ -4,20 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.List.DogListFragment">
+    android:background="@color/lightGray"
+    tools:context=".ui.search.DogSearchFragment">
 
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/textview_first"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:text="LISTA"
+        android:layout_margin="@dimen/title_text_1x_margin"
+        android:gravity="start"
+        android:lineHeight="@dimen/title_text_line_height"
+        android:text="@string/dog_tt_breeds"
+        android:textColor="@color/black"
+        android:textFontWeight="300"
+        android:textSize="@dimen/title_text_font_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="p" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/breed_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/title_text_1x_margin"
+        android:layout_marginStart="@dimen/basic_view_margin"
+        android:layout_marginTop="@dimen/basic_view_margin"
+        android:layout_marginEnd="@dimen/basic_view_margin"
+        android:layout_marginBottom="@dimen/basic_view_margin"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textview_first"
+        app:spanCount="1"
+        tools:itemCount="5"
+        tools:listitem="@layout/basic_breed_detail" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

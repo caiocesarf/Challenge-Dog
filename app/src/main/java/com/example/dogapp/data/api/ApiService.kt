@@ -1,6 +1,7 @@
 package com.example.dogapp.data.api
 
 import BreedsDTO
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Headers
@@ -12,8 +13,12 @@ interface ApiService {
     }
 
     @Headers(API_KEY)
-    @GET("users")
-    suspend fun getDogsByBreeds(): List<BreedsDTO>
+    @GET("/breeds")
+    suspend fun getDogsByBreeds():  List<BreedsDTO>
+
+    @Headers(API_KEY)
+    @GET("/breeds/search")
+    suspend fun getDogsBySearch():  List<BreedsDTO>
 
 
 }
